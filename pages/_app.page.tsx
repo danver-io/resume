@@ -1,12 +1,10 @@
 import type {AppProps} from 'next/app'
 import './globals.css'
 import './reset.css'
-import {appWithTranslation, useTranslation} from 'next-i18next'
 import React, {useState} from 'react'
 import {Hydrate, QueryClient, QueryClientProvider} from '@tanstack/react-query'
 
 const MyApp = ({Component, pageProps}: AppProps) => {
-    const {t} = useTranslation()
     const [queryClient] = useState(() => new QueryClient())
 
     return (
@@ -20,4 +18,4 @@ const MyApp = ({Component, pageProps}: AppProps) => {
     )
 }
 
-export default appWithTranslation(MyApp)
+export default MyApp

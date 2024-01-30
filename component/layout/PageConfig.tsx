@@ -1,5 +1,4 @@
 import React from 'react'
-import {useTranslation} from 'next-i18next'
 import Head from 'next/head'
 import {isNotEmpty} from '@/util/strings'
 import Compose from '@/util/compose'
@@ -18,23 +17,22 @@ interface IMetaTags {
 }
 
 const PageConfig: React.FC<IProps> = ({metaTags = {}, bodyClassName = '', pageName, children}) => {
-    const {t} = useTranslation()
 
     return (
         <>
             <Head>
                 <meta
                     property="og:title"
-                    content={isNotEmpty(metaTags?.title) ? metaTags?.title : t('metaTag.title')}
+                    content={isNotEmpty(metaTags?.title) ? metaTags?.title : 'title'}
                 />
                 <meta
                     name="description"
-                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : t('metaTag.description')}
+                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : 'description'}
                     key={'desc'}
                 />
                 <meta
                     property="og:description"
-                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : t('metaTag.description')}
+                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : 'description'}
                 />
                 <meta property="og:image" content={isNotEmpty(metaTags?.image) ? metaTags?.image : ''} />
             </Head>
