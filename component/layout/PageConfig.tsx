@@ -21,18 +21,19 @@ const PageConfig: React.FC<IProps> = ({metaTags = {}, bodyClassName = '', pageNa
     return (
         <>
             <Head>
+                <title>이력서 - 김지식</title>
                 <meta
                     property="og:title"
-                    content={isNotEmpty(metaTags?.title) ? metaTags?.title : 'title'}
+                    content={isNotEmpty(metaTags?.title) ? metaTags?.title : '이력서 - 김지식'}
                 />
                 <meta
                     name="description"
-                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : 'description'}
+                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : '개발자 김지식의 이력서입니다.'}
                     key={'desc'}
                 />
                 <meta
                     property="og:description"
-                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : 'description'}
+                    content={isNotEmpty(metaTags?.description) ? metaTags?.description : '개발자 김지식의 이력서입니다.'}
                 />
                 <meta property="og:image" content={isNotEmpty(metaTags?.image) ? metaTags?.image : ''} />
             </Head>

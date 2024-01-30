@@ -1,7 +1,8 @@
 import React from 'react'
+import PageConfig from '@/component/layout/PageConfig'
 
 const HomePage: React.FC = () => {
-    return <div className={'font-default text-title.large'}>안녕하세요, 제 이름은 김지식입니다.</div>
+    return <PageConfig>안녕하세요, 제 이름은 김지식입니다.</PageConfig>
 }
 
 export const getStaticProps = async ({locale}) => ({
