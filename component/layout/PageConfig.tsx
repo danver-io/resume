@@ -37,7 +37,7 @@ const PageConfig: React.FC<IProps> = ({metaTags = {}, bodyClassName = '', pageNa
                 <meta property="og:image" content={isNotEmpty(metaTags?.image) ? metaTags?.image : ''} />
             </Head>
 
-            <div className={`flex flex-col min-h-screen relative ${bodyClassName}`}>
+            <div className={`flex flex-col min-h-screen relative ${bodyClassName} font-default`}>
                 <Compose items={[]}>
                     <main className={'grow flex'}>
                         <div className={'grow'}>{children}</div>

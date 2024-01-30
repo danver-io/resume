@@ -3,6 +3,7 @@ import './globals.css'
 import './reset.css'
 import React, {useState} from 'react'
 import {Hydrate, QueryClient, QueryClientProvider} from '@tanstack/react-query'
+import 'pretendard/dist/web/static/pretendard.css'
 
 const MyApp = ({Component, pageProps}: AppProps) => {
     const [queryClient] = useState(() => new QueryClient())
