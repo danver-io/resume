@@ -2,27 +2,18 @@ import React from 'react'
 import PageConfig from '@/component/layout/PageConfig'
 import Image from 'next/image'
 import ProfileImage from '@/public/image/img_profile.png'
-
+import MailIcon from '@/public/svg/ic_mail.svg'
+import BlogIcon from '@/public/svg/ic_blog.svg'
+import GithubIcon from '@/public/svg/ic_github.svg'
+import LinkedInIcon from '@/public/svg/ic_linkedin.svg'
+import PersonalInfoContainer from '@/pages/component/PersonalInfo'
 
 const HomePage: React.FC = () => {
     return (
         <PageConfig bodyClassName={'max-w-[1140px] mx-auto py-[40px]'}>
 
             {/* 인적사항 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-                <Image src={ProfileImage} alt={'프로필 이미지'} className={'px-[20px]'} />
-                <div className={'grid-cols-3 px-[20px]'}>
-                    <p>김지식</p>
-
-                    {/* 이메일 */}
-                    {/* 연락처 - 이메일로 연락주세요 */}
-                    {/* 블로그 주소 */}
-                    {/* 깃허브 주소 */}
-                    {/* 링크드인 주소 */}
-
-                    {/* 휴대전화가 아닌 이메일로 연락 부탁드립니다. */}
-                </div>
-            </section>
+         <PersonalInfoContainer/>
 
             {/* 소개 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>
