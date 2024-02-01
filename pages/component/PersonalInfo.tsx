@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useMemo} from 'react'
 import Image from 'next/image'
 import ProfileImage from '@/public/image/img_profile.png'
 import MailIcon from '@/public/svg/ic_mail.svg'
@@ -12,10 +12,11 @@ export interface IProps {
 }
 
 const PersonalInfoContainer: React.FC<IProps> = ({className}) => {
-    return <div className={`${className}`}>
-        <section className={'grid grid-cols-4 overflow-hidden md:grid-cols-1 gap-y-4'}>
+
+    return <div className={`${className} px-[20px]`}>
+        <section className={'grid grid-cols-4 overflow-hidden md:grid-cols-1 gap-[40px]'}>
             <div className={'flex md:justify-center'}>
-                <DvImage src={ProfileImage} alt={'프로필 이미지'} className={'px-[20px] md:max-w-[260px]'} />
+                <DvImage src={ProfileImage} alt={'프로필 이미지'} className={'md:max-w-[260px]'} />
             </div>
             <div className={'col-span-3 md:col-span-1 px-[20px]'}>
                 <p className={'text-[40px] font-bold md:text-center'}>김지식</p>

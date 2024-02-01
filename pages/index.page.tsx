@@ -3,6 +3,7 @@ import PageConfig from '@/component/layout/PageConfig'
 import PersonalInfoContainer from '@/pages/component/PersonalInfo'
 import IntroduceContainer from '@/pages/component/IntroduceContainer'
 import Footer from '@/pages/component/Footer'
+import SkillContainer from '@/pages/component/SkillContainer/SkillContainer'
 
 const HomePage: React.FC = () => {
     return (
@@ -14,8 +15,7 @@ const HomePage: React.FC = () => {
             <IntroduceContainer className={'mt-20'}/>
 
             {/* 스킬 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
+            <SkillContainer className={'mt-20'}/>
 
             {/* 기업 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>
