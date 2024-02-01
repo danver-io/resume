@@ -1,23 +1,17 @@
 import React from 'react'
 import PageConfig from '@/component/layout/PageConfig'
-import Image from 'next/image'
-import ProfileImage from '@/public/image/img_profile.png'
-import MailIcon from '@/public/svg/ic_mail.svg'
-import BlogIcon from '@/public/svg/ic_blog.svg'
-import GithubIcon from '@/public/svg/ic_github.svg'
-import LinkedInIcon from '@/public/svg/ic_linkedin.svg'
 import PersonalInfoContainer from '@/pages/component/PersonalInfo'
+import IntroduceContainer from '@/pages/component/IntroduceContainer'
+import Footer from '@/pages/component/Footer'
 
 const HomePage: React.FC = () => {
     return (
         <PageConfig bodyClassName={'max-w-[1140px] mx-auto py-[40px]'}>
-
             {/* 인적사항 */}
-         <PersonalInfoContainer/>
+            <PersonalInfoContainer />
 
             {/* 소개 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
+            <IntroduceContainer className={'mt-20'}/>
 
             {/* 스킬 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>
@@ -44,6 +38,8 @@ const HomePage: React.FC = () => {
             <section className={'grid grid-cols-4 overflow-hidden'}>
             </section>
 
+            {/* Footer (출처) */}
+            <Footer className={'hidden'}/>
 
         </PageConfig>
     )
