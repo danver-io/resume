@@ -4,6 +4,7 @@ import PersonalInfoContainer from '@/pages/component/PersonalInfo'
 import IntroduceContainer from '@/pages/component/IntroduceContainer'
 import Footer from '@/pages/component/Footer'
 import SkillContainer from '@/pages/component/SkillContainer/SkillContainer'
+import ExperienceContainer from '@/pages/component/ExperienceContainer/ExperienceContainer'
 
 const HomePage: React.FC = () => {
     return (
@@ -18,8 +19,7 @@ const HomePage: React.FC = () => {
             <SkillContainer className={'mt-20'}/>
 
             {/* 기업 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
+            <ExperienceContainer className={'mt-20'}/>
 
             {/* 프로젝트 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>
