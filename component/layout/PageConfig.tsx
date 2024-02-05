@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import {isNotEmpty} from '@/util/strings'
 import Compose from '@/util/compose'
+import Footer from '@/pages/component/Footer'
 
 interface IProps {
     metaTags?: IMetaTags
@@ -43,6 +44,9 @@ const PageConfig: React.FC<IProps> = ({metaTags = {}, bodyClassName = '', pageNa
                     <main className={'grow flex'}>
                         <div className={'grow'}>{children}</div>
                     </main>
+
+                    {/* Footer (출처) */}
+                    <Footer className={'hidden'} />
                 </Compose>
             </div>
         </>

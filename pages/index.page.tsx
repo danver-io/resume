@@ -5,6 +5,7 @@ import IntroduceContainer from '@/pages/component/IntroduceContainer'
 import Footer from '@/pages/component/Footer'
 import SkillContainer from '@/pages/component/SkillContainer/SkillContainer'
 import ExperienceContainer from '@/pages/component/ExperienceContainer/ExperienceContainer'
+import ProjectContainer from '@/pages/component/ProjectContainer/ProjectContainer'
 
 const HomePage: React.FC = () => {
     return (
@@ -13,20 +14,19 @@ const HomePage: React.FC = () => {
             <PersonalInfoContainer />
 
             {/* 소개 */}
-            <IntroduceContainer className={'mt-20'}/>
+            <IntroduceContainer className={'mt-20'} />
 
             {/* 스킬 */}
-            <SkillContainer className={'mt-20'}/>
+            <SkillContainer className={'mt-20'} />
 
             {/* 기업 */}
-            <ExperienceContainer className={'mt-20'}/>
+            <ExperienceContainer className={'mt-20'} />
 
             {/* 프로젝트 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
+            <ProjectContainer className={'mt-20'} />
 
 
-            {/* 사이드 프로젝트 */}
+            {/* 개인 프로젝트 (사이드 프로젝트 포함) 정맥인식, 슈퍼 마리오 등 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>
             </section>
 
@@ -34,12 +34,9 @@ const HomePage: React.FC = () => {
             <section className={'grid grid-cols-4 overflow-hidden'}>
             </section>
 
-            {/* 기타 */}
+            {/* 기타 NOS 6기 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>
             </section>
-
-            {/* Footer (출처) */}
-            <Footer className={'hidden'}/>
 
         </PageConfig>
     )
