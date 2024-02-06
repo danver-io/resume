@@ -6,6 +6,7 @@ import Footer from '@/pages/component/Footer'
 import SkillContainer from '@/pages/component/SkillContainer/SkillContainer'
 import ExperienceContainer from '@/pages/component/ExperienceContainer/ExperienceContainer'
 import ProjectContainer from '@/pages/component/ProjectContainer/ProjectContainer'
+import SideProjectContainer from '@/pages/component/SideProjectContainer/SideProjectContainer'
 
 const HomePage: React.FC = () => {
     return (
@@ -25,10 +26,8 @@ const HomePage: React.FC = () => {
             {/* 프로젝트 */}
             <ProjectContainer className={'mt-20'} />
 
-
             {/* 개인 프로젝트 (사이드 프로젝트 포함) 정맥인식, 슈퍼 마리오 등 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
+            <SideProjectContainer className={'mt-20'} />
 
             {/* 교육 */}
             <section className={'grid grid-cols-4 overflow-hidden'}>

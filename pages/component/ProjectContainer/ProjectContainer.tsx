@@ -13,7 +13,7 @@ export interface IProps {
 
 export interface IProject {
     name: string
-    description?: string
+    company?: string
     startAt: Date
     endAt?: Date
     contents?: React.ReactNode
@@ -25,7 +25,7 @@ const itemStyle = 'ml-6 text-[16px] text-fg.default font-light'
 const data: IProject[] = [
     {
         name: '공사중개 플랫폼 MVP 버전 개발',
-        description: '플로언스 (FlowNS)',
+        company: '플로언스 (FlowNS)',
         startAt: new Date('2017-07-01'),
         endAt: new Date('2017-12-31'),
         contents: <>
@@ -39,7 +39,7 @@ const data: IProject[] = [
     },
     {
         name: '공사중개 플랫폼 공사PD의 정식 버전 개발',
-        description: '플로언스 (FlowNS)',
+        company: '플로언스 (FlowNS)',
         startAt: new Date('2018-01-01'),
         endAt: new Date('2018-07-31'),
         contents: <>
@@ -52,7 +52,7 @@ const data: IProject[] = [
     },
     {
         name: '빅게임, 소수의 지배 서비스 개발',
-        description: '인플랩 (INPLAB)',
+        company: '인플랩 (INPLAB)',
         startAt: new Date('2018-12-01'),
         endAt: new Date('2019-01-31'),
         contents: <>
@@ -64,7 +64,7 @@ const data: IProject[] = [
     },
     {
         name: '빅게임, 보물찾기 개발',
-        description: '인플랩 (INPLAB)',
+        company: '인플랩 (INPLAB)',
         startAt: new Date('2019-02-01'),
         endAt: new Date('2019-04-31'),
         contents: <>
@@ -76,7 +76,7 @@ const data: IProject[] = [
     },
     {
         name: 'League of Traders 안드로이드 앱 개발 및 개선',
-        description: '위즈페이스 (Wizpace)',
+        company: '위즈페이스 (Wizpace)',
         startAt: new Date('2019-09-01'),
         endAt: new Date('2022-06-30'),
         contents: <>
@@ -89,7 +89,7 @@ const data: IProject[] = [
     },
     {
         name: 'League of Traders 관리자 페이지 개발',
-        description: '위즈페이스 (Wizpace)',
+        company: '위즈페이스 (Wizpace)',
         startAt: new Date('2020-07-01'),
         endAt: new Date('2020-08-31'),
         contents: <>
@@ -101,7 +101,7 @@ const data: IProject[] = [
     },
     {
         name: 'League of Traders 앱을 React Native 로 개발',
-        description: '위즈페이스 (Wizpace)',
+        company: '위즈페이스 (Wizpace)',
         startAt: new Date('2022-01-01'),
         endAt: new Date('2022-08-30'),
         contents: <>
@@ -114,7 +114,7 @@ const data: IProject[] = [
     },
     {
         name: 'League of Traders 웹 개발',
-        description: '위즈페이스 (Wizpace)',
+        company: '위즈페이스 (Wizpace)',
         startAt: new Date('2022-09-01'),
         endAt: new Date('2023-06-30'),
         contents: <>
@@ -133,7 +133,7 @@ const ProjectContainer: React.FC<IProps> = ({className}) => {
             <p className={'text-[32px] font-medium text-blue-600'}>PROJECT</p>
         </div>
         <section className={'mt-[20px] md:mt-[0px] grid divide-y gap-[16px]'}>
-            {data?.reverse().map(item => <ProjectItem {...item} />)}
+            {data?.reverse()?.map(item => <ProjectItem {...item} />)}
         </section>
     </div>
 }

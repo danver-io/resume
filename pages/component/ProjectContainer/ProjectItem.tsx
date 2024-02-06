@@ -8,10 +8,11 @@ export interface IProps extends IProject {
     className?: string
 }
 
+// todo Description을 추가해줘도 되겠다 상황 설명이나 프로젝트에 대한 문단을 쓸 수 있게.
 const ProjectItem: React.FC<IProps> = ({
                                               className,
                                               name,
-                                              description,
+                                              company,
                                               startAt,
                                               endAt,
                                               contents,
@@ -24,7 +25,7 @@ const ProjectItem: React.FC<IProps> = ({
         </div>
         <div className={'col-span-3'}>
             <p className={'text-[28px] font-medium'}>{name}</p>
-            <p className={'mt-1 text-[16px] text-fg.muted font-light'}>{description}</p>
+            <p className={'mt-1 text-[16px] text-fg.muted font-light'}>{company}</p>
             <div className={'mt-3'}>
                 {contents}
             </div>
