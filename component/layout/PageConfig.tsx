@@ -46,7 +46,7 @@ const PageConfig: React.FC<IProps> = ({metaTags = {}, bodyClassName = '', pageNa
                     </main>
 
                     {/* Footer (출처) */}
-                    <Footer className={'hidden'} />
+                    <Footer className={''} />
                 </Compose>
             </div>
         </>
