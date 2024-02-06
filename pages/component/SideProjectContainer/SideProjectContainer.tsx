@@ -26,46 +26,31 @@ const itemStyle = 'ml-6 text-[16px] text-fg.default font-light'
 
 const data: ISideProject[] = [
     {
-        name: '정맥 인식',
-        image: VeinThumb,
-        summary: '대학생 때 진행했던 팀 프로젝트 (3개월)',
+        name: '댄버 코멘트 (개발 진행중)',
+        image: CommentThumb,
+        summary: '',
         contents: <>
             <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>openCV를 접하고 처음 진행한 프로젝트</li>
-                <li className={`${itemStyle}`}>국내외 논문을 찾아보며 다양한 방법 검토</li>
-                <li className={`${itemStyle}`}>웰캠을 적외선 카메라로 개조했고, 특정 파장의 LED를 구매해서 손등의 정맥을 촬영</li>
-                <li className={`${itemStyle}`}>Win32 API를 사용해서 프로그램 구현</li>
+                <li className={`${itemStyle}`}>개인 블로그에 사용하는 플러그인 형태의 댓글 서비스</li>
+                <li className={`${itemStyle}`}>금액을 선불로 충전하고, 이용한만큼 차감하는 구조</li>
+                <li className={`${itemStyle}`}>Serverless Framework를 이용해서 백엔드를 구현</li>
+                <li className={`${itemStyle}`}>Cold Start를 최대한 피하기 위해서 5분마다 웜업</li>
             </ul>
         </>,
-        articleURL: 'https://cuddly-tray-290.notion.site/2496c6515a1045ea9d51331cf3b056ca',
+        serviceURL: 'https://comment.danver.io',
     },
     {
-        name: 'Sing Tuner',
-        image: SingTunerThumb,
-        summary: '음감을 키워주는 음치탈출용 앱',
+        name: '하루메일',
+        image: DisposalMailThumb,
+        summary: '하루동안 사용하고 버리는 일회용 메일 서비스',
         contents: <>
             <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>안드로이드 첫 프로젝트</li>
-                <li className={`${itemStyle}`}>노래를 음대로 잘 부르고 있는지 눈으로 볼 수 있는 앱</li>
-                <li className={`${itemStyle}`}>음감을 키울 수 있도록 미니게임도 첨부</li>
-                <li className={`${itemStyle}`}>자신이 직접 부른 노래를 언제든 다시 듣고 분석할 수 있는 리플레이 기능</li>
+                <li className={`${itemStyle}`}>Next.js를 이용해서 프론트 구현</li>
+                <li className={`${itemStyle}`}>AHEM 메일서버(오픈소스)를 사용해서 서버를 빠르게 구현한 사례</li>
             </ul>
         </>,
-        articleURL: 'https://cuddly-tray-290.notion.site/Sing-Tuner-663ca68a8f6c429b92c4182b543a2ba3',
-    },
-    {
-        name: 'TCP 통신으로 2명이 동시에 즐기는 슈퍼마리오 게임',
-        image: SuperMarioThumb,
-        summary: 'openGL을 활용한 멀티플레이 게임',
-        contents: <>
-            <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>openGL ES를 이용한 슈퍼마리오 게임화면 렌더링</li>
-                <li className={`${itemStyle}`}>DirectX SDK와 MFC를 이용한 게임 맵툴 제작</li>
-                <li className={`${itemStyle}`}>게임에서 충돌 처리, 네트웍을 이용한 플레이어 움직임 동기화, 아이템 기능, 몬스터와의 전투 구현</li>
-                <li className={`${itemStyle}`}>화면에 보이지 않은 것들을 그리지 않는 컬링 처리</li>
-            </ul>
-        </>,
-        articleURL: 'https://cuddly-tray-290.notion.site/TCP-2-bd48e3a2d8974f31906a4f194250dd9d',
+        serviceURL: 'https://tempmail.danver.io',
+        articleURL: 'https://www.danver.io/blog/tmpmail-project',
     },
     {
         name: '서버타임',
@@ -85,31 +70,46 @@ const data: ISideProject[] = [
         articleURL: 'https://www.danver.io/blog/create-servertime',
     },
     {
-        name: '하루메일',
-        image: DisposalMailThumb,
-        summary: '하루동안 사용하고 버리는 일회용 메일 서비스',
+        name: 'TCP 통신으로 2명이 동시에 즐기는 슈퍼마리오 게임',
+        image: SuperMarioThumb,
+        summary: 'openGL을 활용한 멀티플레이 게임',
         contents: <>
             <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>Next.js를 이용해서 프론트 구현</li>
-                <li className={`${itemStyle}`}>AHEM 메일서버(오픈소스)를 사용해서 서버를 빠르게 구현한 사례</li>
+                <li className={`${itemStyle}`}>openGL ES를 이용한 슈퍼마리오 게임화면 렌더링</li>
+                <li className={`${itemStyle}`}>DirectX SDK와 MFC를 이용한 게임 맵툴 제작</li>
+                <li className={`${itemStyle}`}>게임에서 충돌 처리, 네트웍을 이용한 플레이어 움직임 동기화, 아이템 기능, 몬스터와의 전투 구현</li>
+                <li className={`${itemStyle}`}>화면에 보이지 않은 것들을 그리지 않는 컬링 처리</li>
             </ul>
         </>,
-        serviceURL: 'https://tempmail.danver.io',
-        articleURL: 'https://www.danver.io/blog/tmpmail-project',
+        articleURL: 'https://cuddly-tray-290.notion.site/TCP-2-bd48e3a2d8974f31906a4f194250dd9d',
     },
     {
-        name: '댄버 코멘트',
-        image: CommentThumb,
-        summary: '',
+        name: 'Sing Tuner',
+        image: SingTunerThumb,
+        summary: '음감을 키워주는 음치탈출용 앱',
         contents: <>
             <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>개인 블로그에 사용하는 플러그인 형태의 댓글 서비스</li>
-                <li className={`${itemStyle}`}>금액을 선불로 충전하고, 이용한만큼 차감하는 구조</li>
-                <li className={`${itemStyle}`}>Serverless Framework를 이용해서 백엔드를 구현</li>
-                <li className={`${itemStyle}`}>Cold Start를 최대한 피하기 위해서 5분마다 웜업</li>
+                <li className={`${itemStyle}`}>안드로이드 첫 프로젝트</li>
+                <li className={`${itemStyle}`}>노래를 음대로 잘 부르고 있는지 눈으로 볼 수 있는 앱</li>
+                <li className={`${itemStyle}`}>음감을 키울 수 있도록 미니게임도 첨부</li>
+                <li className={`${itemStyle}`}>자신이 직접 부른 노래를 언제든 다시 듣고 분석할 수 있는 리플레이 기능</li>
             </ul>
         </>,
-        serviceURL: 'https://comment.danver.io',
+        articleURL: 'https://cuddly-tray-290.notion.site/Sing-Tuner-663ca68a8f6c429b92c4182b543a2ba3',
+    },
+    {
+        name: '정맥 인식',
+        image: VeinThumb,
+        summary: '대학생 때 진행했던 팀 프로젝트 (3개월)',
+        contents: <>
+            <ul className={`${contentStyle}`}>
+                <li className={`${itemStyle}`}>openCV를 접하고 처음 진행한 프로젝트</li>
+                <li className={`${itemStyle}`}>국내외 논문을 찾아보며 다양한 방법 검토</li>
+                <li className={`${itemStyle}`}>웰캠을 적외선 카메라로 개조했고, 특정 파장의 LED를 구매해서 손등의 정맥을 촬영</li>
+                <li className={`${itemStyle}`}>Win32 API를 사용해서 프로그램 구현</li>
+            </ul>
+        </>,
+        articleURL: 'https://cuddly-tray-290.notion.site/2496c6515a1045ea9d51331cf3b056ca',
     },
 ]
 
@@ -119,7 +119,7 @@ const SideProjectContainer: React.FC<IProps> = ({className}) => {
             <p className={'text-[32px] font-medium text-blue-600'}>SIDE PROJECT</p>
         </div>
         <section className={'mt-[20px] md:mt-[4px] grid divide-y gap-[16px]'}>
-            {data?.reverse().map(item => <SideProjectItem {...item} />)}
+            {data.map(item => <SideProjectItem {...item} />)}
         </section>
     </div>
 }

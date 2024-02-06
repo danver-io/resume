@@ -7,6 +7,8 @@ import SkillContainer from '@/pages/component/SkillContainer/SkillContainer'
 import ExperienceContainer from '@/pages/component/ExperienceContainer/ExperienceContainer'
 import ProjectContainer from '@/pages/component/ProjectContainer/ProjectContainer'
 import SideProjectContainer from '@/pages/component/SideProjectContainer/SideProjectContainer'
+import EducationContainer from '@/pages/component/EducationContainer/EducationContainer'
+import EtcContainer from '@/pages/component/EtcContainer/EtcContainer'
 
 const HomePage: React.FC = () => {
     return (
@@ -30,13 +32,10 @@ const HomePage: React.FC = () => {
             <SideProjectContainer className={'mt-20'} />
 
             {/* 교육 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
+            <EducationContainer className={'mt-20'}/>
 
-            {/* 기타 NOS 6기 */}
-            <section className={'grid grid-cols-4 overflow-hidden'}>
-            </section>
-
+            {/* 기타 */}
+            <EtcContainer className={'mt-20'}/>
         </PageConfig>
     )
 }
