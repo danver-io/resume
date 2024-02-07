@@ -26,7 +26,7 @@ const data: IExperience[] = [
         description: '프론트 개발 팀장',
         startAt: new Date('2019-09-01'),
         endAt: new Date('2023-09-26'),
-        skillTags: ['React Native', 'React.js', 'Go', 'TypeScript', 'JavaScript', 'Jira', 'Notion', 'Svelte'],
+        skillTags: ['React Native', 'React.js', 'Golang', 'TypeScript', 'JavaScript', 'Jira', 'Notion', 'Svelte', 'Android', 'Kotlin'],
         contents: [
             '가상자산 소셜 트레이딩 플랫폼 (16명, 개발팀 9명)',
             '리그오브트레이더스 서비스의 초기 멤버로 시작',
@@ -56,7 +56,7 @@ const data: IExperience[] = [
         startAt: new Date('2017-07-01'),
         endAt: new Date('2018-07-31'),
         skillTags: [
-            'Android', 'PHP', 'PostgreSQL', 'AWS', 'Jira',
+            'Android', 'PHP', 'PostgreSQL', 'AWS', 'Jira', 'Django'
         ],
         contents: [
             '공사 중개 플랫폼 스타트업 (20명, 개발팀 5명)',

@@ -49,9 +49,8 @@ const PersonalInfoContainer: React.FC<IProps> = ({className}) => {
                        className={'cursor-pointer text-blue-600 break-all'}>https://www.linkedin.com/in/danver0921</a>
                 </div>
 
-                {/* 휴대전화가 아닌 이메일로 연락 부탁드립니다. */}
                 <p className={'border px-4 py-3.5 mt-5 rounded bg-gray-100'}>
-                    이메일로 연락 부탁드립니다.
+                    이메일 또는 지원서에 있는 연락처로 연락 부탁드립니다.
                 </p>
             </div>
         </section>

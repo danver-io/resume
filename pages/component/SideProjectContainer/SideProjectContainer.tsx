@@ -49,7 +49,7 @@ const data: ISideProject[] = [
                 <li className={`${itemStyle}`}>AHEM 메일서버(오픈소스)를 사용해서 서버를 빠르게 구현한 사례</li>
             </ul>
         </>,
-        serviceURL: 'https://tempmail.danver.io',
+        serviceURL: 'https://tmpmail.danver.io',
         articleURL: 'https://www.danver.io/blog/tmpmail-project',
     },
     {
