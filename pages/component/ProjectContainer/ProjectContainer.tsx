@@ -1,11 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
-import signImage from '@/public/image/img_sign.png'
-import SkillItem from '@/pages/component/SkillContainer/SkillItem'
-import SkillCategoryContainer from '@/pages/component/SkillContainer/SkillCategoryContainer/SkillCategoryContainer'
-import DvTooltip from '@/component/tooltip/DvTooltip'
-import ExperienceItem from '@/pages/component/ExperienceContainer/ExperienceItem'
 import ProjectItem from '@/pages/component/ProjectContainer/ProjectItem'
+import ImgLotAdmin from '@/public/image/img_lotadmin.png'
+import ImgLotWeb from '@/public/image/img_lot_web.png'
+import ImgLotAndroid from '@/public/image/img_lot_android.png'
+import ImgGongsaPD from '@/public/image/img_gongsapd.png'
+import ImgMonority from '@/public/image/img_monority.png'
+import ImgTreasure from '@/public/image/img_treasure.png'
+import ImgLotRN from '@/public/image/img_lot_rn.png'
 
 export interface IProps {
     className?: string
@@ -16,6 +17,7 @@ export interface IProject {
     company?: string
     startAt: Date
     endAt?: Date
+    thumbnail?: any
     contents?: React.ReactNode
     serviceURL?: string
     articleURL?: string
@@ -30,6 +32,7 @@ const data: IProject[] = [
         company: '위즈페이스 (Wizpace)',
         startAt: new Date('2022-09-01'),
         endAt: new Date('2023-06-30'),
+        thumbnail: ImgLotWeb,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>Next.js로 개발</li>
@@ -44,6 +47,7 @@ const data: IProject[] = [
         company: '위즈페이스 (Wizpace)',
         startAt: new Date('2022-01-01'),
         endAt: new Date('2022-08-30'),
+        thumbnail: ImgLotRN,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>Android로 개발되어있던 앱을 React Native로 재개발 <br /> (이유 : iOS 개발자 채용의 어려움, 생산성,
@@ -60,6 +64,7 @@ const data: IProject[] = [
         company: '위즈페이스 (Wizpace)',
         startAt: new Date('2020-07-01'),
         endAt: new Date('2020-08-31'),
+        thumbnail: ImgLotAdmin,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>관리자 페이지가 없어 개발자에게 끊임없이 요청이 오는 상황에서 필요성을 느꼈고 개발 필요성을 어필</li>
@@ -72,6 +77,7 @@ const data: IProject[] = [
         company: '위즈페이스 (Wizpace)',
         startAt: new Date('2019-09-01'),
         endAt: new Date('2022-06-30'),
+        thumbnail: ImgLotAndroid,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>개발 초기단계에 합류하여 개발 시작</li>
@@ -85,6 +91,7 @@ const data: IProject[] = [
         company: '인플랩 (INPLAB)',
         startAt: new Date('2019-02-01'),
         endAt: new Date('2019-04-31'),
+        thumbnail: ImgTreasure,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>오프라인 보물찾기 행사에서 활용하는 모바일 웹과 백엔드 전체 개발</li>
@@ -97,6 +104,7 @@ const data: IProject[] = [
         company: '인플랩 (INPLAB)',
         startAt: new Date('2018-12-01'),
         endAt: new Date('2019-01-31'),
+        thumbnail: ImgMonority,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>프론트는 Django를 사용해 모바일 웹과 백엔드 개발</li>
@@ -105,29 +113,18 @@ const data: IProject[] = [
         </>,
     },
     {
-        name: '공사중개 플랫폼 공사PD의 정식 버전 개발',
-        company: '플로언스 (FlowNS)',
-        startAt: new Date('2018-01-01'),
-        endAt: new Date('2018-07-31'),
-        contents: <>
-            <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>Android 앱 개발 담당</li>
-                <li className={`${itemStyle}`}>주니어 개발자를 채용해서 함께 개발, 가르치면서 개발적인 협업에 대해 배울 수 있었던 기회 (Git, 코드 관리 등)</li>
-                <li className={`${itemStyle}`}>이해하기 쉬운 일관된 구조를 갖기 위해 MVVM 아키텍처 적용</li>
-            </ul>
-        </>,
-    },
-    {
-        name: '공사중개 플랫폼 MVP 버전 개발',
+        name: '공사중개 플랫폼 공사PD 개발',
         company: '플로언스 (FlowNS)',
         startAt: new Date('2017-07-01'),
-        endAt: new Date('2017-12-31'),
+        endAt: new Date('2018-07-31'),
+        thumbnail: ImgGongsaPD,
         contents: <>
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>Android 앱 개발 담당</li>
                 <li className={`${itemStyle}`}>초기 개발팀 3명 모두가 주니어 개발자라서, 백엔드 역시 함께 논의하며 개발</li>
-                <li className={`${itemStyle}`}>Nginx, PHP, PostgreSQL 등을 사용하여 서비스 개발</li>
+                <li className={`${itemStyle}`}>주니어 개발자를 채용해서 함께 개발, 가르치면서 개발적인 협업에 대해 배울 수 있었던 기회 (Git, 코드 관리 등)</li>
                 <li className={`${itemStyle}`}>디자이너와 기획자 역시 모바일 앱 개발은 처음이라서 서로 소통하며 협업</li>
+                <li className={`${itemStyle}`}>이해하기 쉬운 일관된 구조를 갖기 위해 MVVM 아키텍처 적용</li>
             </ul>
         </>,
     },

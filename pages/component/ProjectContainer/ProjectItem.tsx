@@ -6,6 +6,7 @@ import {IProject} from '@/pages/component/ProjectContainer/ProjectContainer'
 import {isNotEmpty} from '@/util/strings'
 import Link from 'next/link'
 import {Button} from '@danver-io/danver-design-system'
+import DvImage from '@/component/image/DvImage/DvImage'
 
 export interface IProps extends IProject {
     className?: string
@@ -21,12 +22,12 @@ const ProjectItem: React.FC<IProps> = ({
                                            contents,
                                            articleURL,
                                            serviceURL,
+                                           thumbnail,
                                        }) => {
 
     return <div className={`grid grid-cols-4 gap-x-[40px] py-[20px] ${className} md:grid-cols-1`}>
         <div className={'flex flex-col md:flex-row md:justify-between md:items-center'}>
-            <p className={'text-[24px] font-medium text-gray-400 text-right md:text-left mt-1'}>{format(startAt, 'yyyy.' +
-                ' MM')} ~ {endAt && format(endAt, 'yyyy. MM')}</p>
+            {thumbnail && <DvImage src={thumbnail} className={'border-black border-[5px] rounded-lg max-w-[300px]'} />}
         </div>
         <div className={'col-span-3'}>
             <div className={'gap-x-1'}>
@@ -40,7 +41,9 @@ const ProjectItem: React.FC<IProps> = ({
                         label={'게시글'}
                         size={'small'} /></Link>}
             </div>
-            <p className={'mt-1 text-[16px] text-fg.muted font-light'}>{company}</p>
+            <p className={'text-[16px] font-light text-fg.muted mt-1'}>{format(startAt, 'yyyy.' +
+                ' MM')} ~ {endAt && format(endAt, 'yyyy. MM')}</p>
+            <p className={'text-[16px] text-fg.muted font-light'}>{company}</p>
             <div className={'mt-3'}>
                 {contents}
             </div>
