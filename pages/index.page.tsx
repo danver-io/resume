@@ -22,19 +22,19 @@ const HomePage: React.FC = () => {
                 {/* 스킬 */}
                 <SkillContainer className={'mt-20'} />
 
-                {/* 기업 */}
+                {/*/!* 기업 *!/*/}
                 <ExperienceContainer className={'mt-20'} />
 
-                {/* 프로젝트 */}
+                {/*/!* 프로젝트 *!/*/}
                 <ProjectContainer className={'mt-20'} />
 
-                {/* 개인 프로젝트 (사이드 프로젝트 포함) 정맥인식, 슈퍼 마리오 등 */}
+                {/*/!* 개인 프로젝트 (사이드 프로젝트 포함) 정맥인식, 슈퍼 마리오 등 *!/*/}
                 <SideProjectContainer className={'mt-20'} />
 
-                {/* 교육 */}
+                {/*/!* 교육 *!/*/}
                 <EducationContainer className={'mt-20'}/>
 
-                {/* 기타 */}
+                {/*/!* 기타 *!/*/}
                 <EtcContainer className={'mt-20'}/>
             </div>
         </PageConfig>

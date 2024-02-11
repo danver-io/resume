@@ -90,7 +90,7 @@ const data: IProject[] = [
         name: '빅게임, 보물찾기 개발',
         company: '인플랩 (INPLAB)',
         startAt: new Date('2019-02-01'),
-        endAt: new Date('2019-04-31'),
+        endAt: new Date('2019-04-30'),
         thumbnail: ImgTreasure,
         contents: <>
             <ul className={`${contentStyle}`}>
@@ -136,7 +136,7 @@ const ProjectContainer: React.FC<IProps> = ({className}) => {
             <p className={'text-[32px] font-medium text-blue-600'}>PROJECT</p>
         </div>
         <section className={'mt-[20px] md:mt-[0px] grid divide-y gap-[16px]'}>
-            {data.map(item => <ProjectItem {...item} />)}
+            {data.map(item => <ProjectItem key={item?.name} {...item} />)}
         </section>
     </div>
 }

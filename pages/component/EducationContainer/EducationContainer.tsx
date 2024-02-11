@@ -40,7 +40,7 @@ const EducationContainer: React.FC<IProps> = ({className}) => {
             <p className={'text-[32px] font-medium text-blue-600'}>EDUCATION</p>
         </div>
         <section className={'mt-[20px] md:mt-[0px] grid divide-y gap-[16px]'}>
-            {data?.map(item => <EducationItem {...item} />)}
+            {data?.map(item => <EducationItem key={item?.name} {...item} />)}
         </section>
     </div>
 }
