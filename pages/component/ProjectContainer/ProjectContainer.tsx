@@ -69,6 +69,7 @@ const data: IProject[] = [
             <ul className={`${contentStyle}`}>
                 <li className={`${itemStyle}`}>관리자 페이지가 없어 개발자에게 끊임없이 요청이 오는 상황에서 필요성을 느꼈고 개발 필요성을 어필</li>
                 <li className={`${itemStyle}`}>React에 대한 경험이 없는 상황이었지만, 내부 웹개발자의 도움을 받아 직접 개발</li>
+                <li className={`${itemStyle}`}>백엔드와 프론트를 모두 제작 (React, Golang)</li>
             </ul>
         </>,
     },
