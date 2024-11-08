@@ -38,8 +38,8 @@ const PersonalInfoContainer: React.FC<IProps> = ({className}) => {
                 {/* 깃허브 주소 */}
                 <div className={'flex gap-4 items-center mt-3'}>
                     <GithubIcon className={'w-7 h-7 flex-none'} />
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/JiSikKim"
-                       className={'cursor-pointer text-blue-600 break-all'}>https://github.com/JiSikKim</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/danver0921"
+                       className={'cursor-pointer text-blue-600 break-all'}>https://github.com/danver0921</a>
                 </div>
 
                 {/* 링크드인 주소 */}
