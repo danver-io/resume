@@ -1,10 +1,5 @@
-import React from 'react'
-import Image from 'next/image'
-import signImage from '@/public/image/img_sign.png'
-import SkillItem from '@/pages/component/SkillContainer/SkillItem'
-import SkillCategoryContainer from '@/pages/component/SkillContainer/SkillCategoryContainer/SkillCategoryContainer'
-import DvTooltip from '@/component/tooltip/DvTooltip'
 import ExperienceItem from '@/pages/component/ExperienceContainer/ExperienceItem'
+import React from 'react'
 
 export interface IProps {
     className?: string
@@ -21,6 +16,19 @@ export interface IExperience {
 }
 
 const data: IExperience[] = [
+    {
+        name: '돌봄드림',
+        description: '프론트 개발',
+        startAt: new Date('2024-03-04'),
+        endAt: new Date('2024-09-13'),
+        skillTags: ['React.js', 'TypeScript'],
+        contents: [
+            '스마트 의류 기반의 케어 기술을 개발하는 팀에서 프론트엔드 개발 담당 (10명, 개발팀 4명)',
+            '발달장애인의 정서 안정을 위한 스마트조끼 HUGGY의 앱 및 웹 유지보수',
+            '돌봄조끼 클로멘탈 웹 서비스 개발 및 개선',
+            'AI 학습에 집중하기 위해 퇴사',
+        ],
+    },
     {
         name: '위즈페이스 (Wizpace)',
         description: '프론트 개발 팀장',
