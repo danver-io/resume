@@ -1,12 +1,12 @@
-import React from 'react'
-import ProjectItem from '@/pages/component/ProjectContainer/ProjectItem'
 import SideProjectItem from '@/pages/component/SideProjectContainer/SideProjectItem'
-import VeinThumb from '@/public/image/img_vein.png'
-import SingTunerThumb from '@/public/image/img_singtuner.png'
+import DisposalMailThumb from '@/public/image/img_disposalMail.png'
+import DLogThumb from '@/public/image/img_dlog.png'
 import SuperMarioThumb from '@/public/image/img_mario.png'
 import ServerTimeThumb from '@/public/image/img_servertime.png'
-import DisposalMailThumb from '@/public/image/img_disposalMail.png'
-import CommentThumb from '@/public/image/img_comment.png'
+import SingTunerThumb from '@/public/image/img_singtuner.png'
+import TupickThumb from '@/public/image/img_tupick.jpg'
+import VeinThumb from '@/public/image/img_vein.png'
+import React from 'react'
 
 export interface IProps {
     className?: string
@@ -26,18 +26,34 @@ const itemStyle = 'ml-6 text-[16px] text-fg.default font-light'
 
 const data: ISideProject[] = [
     {
-        name: '댄버 코멘트 (개발 진행중)',
-        image: CommentThumb,
+        name: '다국어 블로그 DLog 서비스 개발',
+        image: DLogThumb,
         summary: '',
         contents: <>
             <ul className={`${contentStyle}`}>
-                <li className={`${itemStyle}`}>개인 블로그에 사용하는 플러그인 형태의 댓글 서비스</li>
-                <li className={`${itemStyle}`}>금액을 선불로 충전하고, 이용한만큼 차감하는 구조</li>
-                <li className={`${itemStyle}`}>Serverless Framework를 이용해서 백엔드를 구현</li>
-                <li className={`${itemStyle}`}>Cold Start를 최대한 피하기 위해서 5분마다 웜업</li>
+                <li className={`${itemStyle}`}>OpenAI API를 이용한 다국어 번역 기능이 포함된 블로그 서비스</li>
+                <li className={`${itemStyle}`}>글을 작성하면 자동으로 한글, 영어, 중국어, 일본어 등으로 번역해주는 서비스</li>
+                <li className={`${itemStyle}`}>신용카드 정기결제를 위한 빌링 시스템</li>
             </ul>
         </>,
-        serviceURL: 'https://comment.danver.io',
+        serviceURL: 'https://blog.danver.io',
+        articleURL: 'https://blog.danver.io/post/67ac18627e10807f147d3ba5',
+    },
+    {
+        name: '수강신청 사이트 Tupick 개발',
+        image: TupickThumb,
+        summary: '',
+        contents: <>
+            <ul className={`${contentStyle}`}>
+                <li className={`${itemStyle}`}>수강신청이 가능한 웹사이트로, 참가자 모집 링크를 생성하여 인원 제한과 신청 항목 설정 가능</li>
+                <li className={`${itemStyle}`}>React, TypeScript, TailwindCSS, Vite 조합으로 프론트엔드 구성</li>
+                <li className={`${itemStyle}`}>Go와 MongoDB를 사용해 빠르고 가벼운 백엔드 구성</li>
+                <li className={`${itemStyle}`}>스트레스 테스트(k6)를 통해 1000명 동시 접속에서도 안정적으로 작동 확인</li>
+                <li className={`${itemStyle}`}>기존 이벤트 템플릿 복제 기능 제공으로 반복적인 수강신청에 적합</li>
+            </ul>
+        </>,
+        serviceURL: 'https://tupick.danver.io',
+        articleURL: 'https://blog.danver.io/post/67ad5077d08bfe4300640a8a',
     },
     {
         name: '하루메일',

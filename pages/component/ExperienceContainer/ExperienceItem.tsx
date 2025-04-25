@@ -1,7 +1,6 @@
-import React, {useMemo} from 'react'
-import {IExperience} from '@/pages/component/ExperienceContainer/ExperienceContainer'
-import {format} from 'date-fns'
-import skillItem from '@/pages/component/SkillContainer/SkillItem'
+import { IExperience } from '@/pages/component/ExperienceContainer/ExperienceContainer'
+import { format } from 'date-fns'
+import React, { useMemo } from 'react'
 
 export interface IProps extends IExperience {
     className?: string
@@ -29,11 +28,11 @@ const ExperienceItem: React.FC<IProps> = ({
             return `${Math.trunc(month)}개월`
     }, [startAt, endAt])
 
-    return <div className={`grid grid-cols-4 gap-x-[40px] py-[20px] ${className} md:grid-cols-1`}>
+    return <div className={`grid grid-cols-4 gap-x-[40px] py-[20px] ${className} md:grid-cols-1 overflow-hidden`}>
         <div className={'flex flex-col md:flex-row md:justify-between md:items-center'}>
             <p className={'text-[24px] font-medium text-gray-400 text-right md:text-left mt-1'}>{format(startAt, 'yyyy.' +
                 ' MM')} ~ {endAt && format(endAt, 'yyyy. MM')}</p>
-            <div className={'flex justify-end mt-1 gap-x-1'}>
+            <div className={'flex justify-end mt-1 gap-x-1 md:hidden'}>
                 {isWorkingNow && <span
                     className={'text-[12px] bg-blue-500 text-white px-1 py-0.5 rounded font-bold flex-none'}>재직 중</span>}
                 {startAt && endAt &&
@@ -48,7 +47,7 @@ const ExperienceItem: React.FC<IProps> = ({
                 {contents?.map(item => <li key={item}
                                            className={'ml-6 text-[16px] text-fg.default font-light'}>{item}</li>)}
             </ul>
-            {skillTags && skillTags?.length > 0 && <div className={'mt-5 flex gap-x-1'}>
+            {skillTags && skillTags?.length > 0 && <div className={'mt-5 flex flex-wrap gap-1'}>
                 {skillTags?.map(item => <span
                     key={item} className={'text-[12px] text-white font-normal bg-gray-500 px-1 py-0.5 rounded'}>{item}</span>)}
             </div>}

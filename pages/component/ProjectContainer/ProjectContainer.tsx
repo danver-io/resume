@@ -1,12 +1,13 @@
-import React from 'react'
 import ProjectItem from '@/pages/component/ProjectContainer/ProjectItem'
-import ImgLotAdmin from '@/public/image/img_lotadmin.png'
-import ImgLotWeb from '@/public/image/img_lot_web.png'
-import ImgLotAndroid from '@/public/image/img_lot_android.png'
+import ImgClomental from '@/public/image/img_clomental.png'
 import ImgGongsaPD from '@/public/image/img_gongsapd.png'
+import ImgLotAndroid from '@/public/image/img_lot_android.png'
+import ImgLotRN from '@/public/image/img_lot_rn.png'
+import ImgLotWeb from '@/public/image/img_lot_web.png'
+import ImgLotAdmin from '@/public/image/img_lotadmin.png'
 import ImgMonority from '@/public/image/img_monority.png'
 import ImgTreasure from '@/public/image/img_treasure.png'
-import ImgLotRN from '@/public/image/img_lot_rn.png'
+import React from 'react'
 
 export interface IProps {
     className?: string
@@ -27,6 +28,21 @@ const contentStyle = 'list-disc list-outside mt-4'
 const itemStyle = 'ml-6 text-[16px] text-fg.default font-light'
 
 const data: IProject[] = [
+    {
+        name: 'Clomental 웹 개발',
+        company: '돌봄드림 (DolbomDream)',
+        startAt: new Date('2024-04-01'),
+        endAt: new Date('2024-09-01'),
+        thumbnail: ImgClomental,
+        contents: <>
+            <ul className={`${contentStyle}`}>
+                <li className={`${itemStyle}`}>React.js로 개발</li>
+                <li className={`${itemStyle}`}>디자이너와 함께 디자인 시스템 개발 및 개선</li>
+                <li className={`${itemStyle}`}>CI/CD 적용 (Github Actions, Azure, TailwindCSS)</li>
+            </ul>
+        </>,
+        serviceURL: 'https://clomental.com/',
+    },
     {
         name: 'League of Traders 웹 개발',
         company: '위즈페이스 (Wizpace)',

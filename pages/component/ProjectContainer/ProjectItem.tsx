@@ -1,12 +1,10 @@
-import React, {useMemo} from 'react'
-import {IExperience} from '@/pages/component/ExperienceContainer/ExperienceContainer'
-import {format} from 'date-fns'
-import skillItem from '@/pages/component/SkillContainer/SkillItem'
-import {IProject} from '@/pages/component/ProjectContainer/ProjectContainer'
-import {isNotEmpty} from '@/util/strings'
-import Link from 'next/link'
-import {Button} from '@danver-io/danver-design-system'
 import DvImage from '@/component/image/DvImage/DvImage'
+import { IProject } from '@/pages/component/ProjectContainer/ProjectContainer'
+import { isNotEmpty } from '@/util/strings'
+import { Button } from '@danver-io/danver-design-system'
+import { format } from 'date-fns'
+import Link from 'next/link'
+import React from 'react'
 
 export interface IProps extends IProject {
     className?: string
@@ -25,7 +23,7 @@ const ProjectItem: React.FC<IProps> = ({
                                            thumbnail,
                                        }) => {
 
-    return <div className={`grid grid-cols-4 gap-x-[40px] py-[20px] ${className} md:grid-cols-1`}>
+    return <div className={`grid grid-cols-4 gap-x-[40px] py-[20px] ${className} md:grid-cols-1 gap-[10px]`}>
         <div className={'flex flex-col md:flex-row md:justify-between md:items-center'}>
             {thumbnail && <DvImage src={thumbnail} className={'border-black border-[5px] rounded-lg max-w-[300px]'} />}
         </div>
