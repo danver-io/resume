@@ -1,11 +1,10 @@
-import React, {useMemo} from 'react'
-import Image from 'next/image'
+import DvImage from '@/component/image/DvImage/DvImage'
 import ProfileImage from '@/public/image/img_profile.png'
-import MailIcon from '@/public/svg/ic_mail.svg'
 import BlogIcon from '@/public/svg/ic_blog.svg'
 import GithubIcon from '@/public/svg/ic_github.svg'
 import LinkedInIcon from '@/public/svg/ic_linkedin.svg'
-import DvImage from '@/component/image/DvImage/DvImage'
+import MailIcon from '@/public/svg/ic_mail.svg'
+import React from 'react'
 
 export interface IProps {
     className?: string
@@ -31,8 +30,8 @@ const PersonalInfoContainer: React.FC<IProps> = ({className}) => {
                 {/* 블로그 주소 */}
                 <div className={'flex gap-4 items-center mt-3'}>
                     <BlogIcon className={'w-7 h-7 flex-none'} />
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.danver.io"
-                       className={'cursor-pointer text-blue-600 break-all'}>https://www.danver.io</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://blog.danver.io/@0921pig"
+                       className={'cursor-pointer text-blue-600 break-all'}>https://blog.danver.io/@0921pig</a>
                 </div>
 
                 {/* 깃허브 주소 */}
