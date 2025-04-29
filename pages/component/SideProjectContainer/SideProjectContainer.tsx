@@ -97,7 +97,7 @@ const data: ISideProject[] = [
                 <li className={`${itemStyle}`}>화면에 보이지 않은 것들을 그리지 않는 컬링 처리</li>
             </ul>
         </>,
-        articleURL: 'https://cuddly-tray-290.notion.site/TCP-2-bd48e3a2d8974f31906a4f194250dd9d',
+        articleURL: 'https://danver0921.notion.site/TCP-2-bd48e3a2d8974f31906a4f194250dd9d',
     },
     {
         name: 'Sing Tuner',
@@ -111,7 +111,7 @@ const data: ISideProject[] = [
                 <li className={`${itemStyle}`}>자신이 직접 부른 노래를 언제든 다시 듣고 분석할 수 있는 리플레이 기능</li>
             </ul>
         </>,
-        articleURL: 'https://cuddly-tray-290.notion.site/Sing-Tuner-663ca68a8f6c429b92c4182b543a2ba3',
+        articleURL: 'https://danver0921.notion.site/Sing-Tuner-663ca68a8f6c429b92c4182b543a2ba3',
     },
     {
         name: '정맥 인식',
@@ -125,7 +125,7 @@ const data: ISideProject[] = [
                 <li className={`${itemStyle}`}>Win32 API를 사용해서 프로그램 구현</li>
             </ul>
         </>,
-        articleURL: 'https://cuddly-tray-290.notion.site/2496c6515a1045ea9d51331cf3b056ca',
+        articleURL: 'https://danver0921.notion.site/2496c6515a1045ea9d51331cf3b056ca',
     },
 ]
 
